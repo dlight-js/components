@@ -22,7 +22,7 @@ export function lazy<T>(importFunc: () => Promise<{ default: T }>, fallback?: an
 
     Body() {
       if (this.v) {
-        (tag(this.v)() as any)
+        tag(this.v)()
           .forwardProps(true)
       } else if (fallback) {
         tag(fallback)()
