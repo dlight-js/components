@@ -1,5 +1,5 @@
 import { View } from "@dlightjs/dlight"
-import { type Pretty, tag } from "@dlightjs/types"
+import { type Pretty, ForwardProps } from "@dlightjs/types"
 
 /**
  * @example
@@ -8,25 +8,29 @@ import { type Pretty, tag } from "@dlightjs/types"
  * const MyComp = lazy(() => import("./MyComp.view"))
  * ```
  */
-export function lazy<T>(importFunc: () => Promise<{ default: T }>, fallback?: any) {
-  return class extends View {
+export function lazy<T>(
+  importFunc: () => Promise<{ default: T }>,
+  fallback?: any
+) {
+  @ForwardProps
+  @View
+  class LazyComp {
     v?: any
-    _$forwardProps = true
 
     willMount() {
-      void importFunc()
-        .then((view: any) => {
-          this.v = view.default
-        })
+      void importFunc().then((module: any) => {
+        this.v = module.default
+      })
     }
 
-    Body() {
+    View() {
       if (this.v) {
-        tag(this.v)()
-          .forwardProps(true)
+        this.v().forwardProps()
       } else if (fallback) {
-        tag(fallback)()
+        fallback()
       }
     }
-  } as Pretty as T
+  }
+
+  return LazyComp as Pretty as T
 }

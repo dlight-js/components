@@ -1,3 +1,3 @@
 export { Navigator } from "./Navigator"
-export { default as Route } from "./Route.view"
-export { default as RouterSpace } from "./RouterSpace.view"
+export { default as Route } from "./Routes.view"
+export { default as Routes } from "./Routes.view"

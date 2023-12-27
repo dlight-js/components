@@ -1,4 +1,3 @@
-
 export function getHashLocation() {
   return location.hash.slice(2)
 }
@@ -14,7 +13,10 @@ export function getPath(url: string, mode: "history" | "hash") {
   } else {
     // ---- 相对位置
     if (url[0] !== ".") url = "./" + url
-    const baseUrl = mode === "history" ? window.location.pathname : window.location.hash.replace(/^#/, "")
+    const baseUrl =
+      mode === "history"
+        ? window.location.pathname
+        : window.location.hash.replace(/^#/, "")
     const splitUrls = url.split("/")
     const currUrls = baseUrl.split("/").filter(u => u)
     let idx = 0
