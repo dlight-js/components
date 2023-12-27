@@ -34,7 +34,13 @@ class Routes implements RoutesProps {
   currUrl = this.mode === "hash" ? getHashLocation() : getHistoryLocation()
 
   prevPathCondition?: string
-  currentRoute: any
+  currentRoute: {
+    view: any
+    type: "view" | "lazy"
+  } = {
+    view: null,
+    type: "view",
+  }
   navigator = new Navigator()
 
   isRoutes = true
@@ -64,12 +70,18 @@ class Routes implements RoutesProps {
         return
       }
       this.prevPathCondition = targetUrl
+
       if ("propViewFunc" in (child as any)) {
-        this.currentRoute = child
+        this.currentRoute = {
+          view: child,
+          type: "view",
+        }
       } else {
-        // ---- laze load
         ;(child as any)().then((module: any) => {
-          this.currentRoute = new module.default()
+          this.currentRoute = {
+            view: module.default,
+            type: "lazy",
+          }
         })
       }
       return
@@ -85,12 +97,12 @@ class Routes implements RoutesProps {
   }
 
   willMount() {
+    this.updateRoute()
     this.navigator.mode = this.mode!
     this.getNavigator?.(this.navigator)
   }
 
   didMount() {
-    this.updateRoute()
     if (this.mode === "hash") {
       addEventListener("load", this.hashChangeListen)
       addEventListener("hashchange", this.hashChangeListen)
@@ -141,7 +153,11 @@ class Routes implements RoutesProps {
       .path(this.currUrl)
       ._$baseUrl(`${this._$baseUrl}${this.prevPathCondition}/`)
     {
-      this.currentRoute
+      if (this.currentRoute.type === "view") {
+        this.currentRoute.view
+      } else {
+        this.currentRoute.view()
+      }
     }
   }
 }

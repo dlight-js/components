@@ -3,11 +3,11 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/cli': ^7.22.6
   '@babel/core': ^7.20.12
-  '@dlightjs/dlight': 1.0.0-alpha.10
-  '@dlightjs/types': 1.0.0-alpha.0
+  '@dlightjs/dlight': ^1.0.0-alpha.14
+  '@dlightjs/types': ^1.0.0-alpha.0
   '@typescript-eslint/eslint-plugin': ^6.15.0
   '@typescript-eslint/parser': ^6.15.0
-  babel-preset-dlight: 1.0.0-alpha.6
+  babel-preset-dlight: ^1.0.0-alpha.7
   eslint: ^8.55.0
   eslint-config-prettier: ^9.1.0
   eslint-plugin-prettier: ^5.1.1
@@ -15,10 +15,10 @@ specifiers:
   tsup: ^6.5.0
   typescript: ^4.9.3
   vite: ^4.4.9
-  vite-plugin-dlight: 1.0.0-alpha.6
+  vite-plugin-dlight: ^1.0.0-alpha.7
 
 dependencies:
-  '@dlightjs/dlight': 1.0.0-alpha.10
+  '@dlightjs/dlight': 1.0.0-alpha.14
 
 devDependencies:
   '@babel/cli': 7.23.0_@babel+core@7.23.0
@@ -26,7 +26,7 @@ devDependencies:
   '@dlightjs/types': 1.0.0-alpha.0
   '@typescript-eslint/eslint-plugin': 6.16.0_g3cvlqlouer5g23hee5mbeghly
   '@typescript-eslint/parser': 6.16.0_7sjm5uif3lrlodkmlzqsvrpzla
-  babel-preset-dlight: 1.0.0-alpha.6_@babel+core@7.23.0
+  babel-preset-dlight: 1.0.0-alpha.7_@babel+core@7.23.0
   eslint: 8.56.0
   eslint-config-prettier: 9.1.0_eslint@8.56.0
   eslint-plugin-prettier: 5.1.2_glhtlnotbb6crparhn2ogh22s4
@@ -34,7 +34,7 @@ devDependencies:
   tsup: 6.7.0_typescript@4.9.5
   typescript: 4.9.5
   vite: 4.4.9
-  vite-plugin-dlight: 1.0.0-alpha.6
+  vite-plugin-dlight: 1.0.0-alpha.7
 
 packages:
 
@@ -277,8 +277,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@dlightjs/dlight/1.0.0-alpha.10:
-    resolution: {integrity: sha512-NKpq+EhS28IRE2PeWtxgEnjwLrZqbTDoSd8KcSi6RelUNUTILg45XLJCuTukc1K00aa9VB26rUKaxzS5hYSS+w==}
+  /@dlightjs/dlight/1.0.0-alpha.14:
+    resolution: {integrity: sha512-j49vcdMDm4sD7u8PCUZtfumfnPdQVZQ54H3gnWDtrQV58AnJRvom3YZDcqMtnOs1gDSCz+0U1bYi5hzKZGI33Q==}
     dev: false
 
   /@dlightjs/error-handler/1.0.0-alpha.0:
@@ -1037,8 +1037,8 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /babel-preset-dlight/1.0.0-alpha.6_@babel+core@7.23.0:
-    resolution: {integrity: sha512-/8ns/hdPSaV+ntwrkXjWwS1h6y9cUq1o69RIWs+XlVWNKTdlHj1+KesSIPhKfom1SwfxMUQFG52iuApUH4nvzQ==}
+  /babel-preset-dlight/1.0.0-alpha.7_@babel+core@7.23.0:
+    resolution: {integrity: sha512-gxDL0mSDQExFFDwS9pRw2nfKI6/+2AMe6hbzEvM3o3x3eEl0rum1i6Ez0Pab0CJNoUP2d7KdCST7aBMEilB0PA==}
     dependencies:
       '@babel/plugin-syntax-decorators': 7.23.3_@babel+core@7.23.0
       '@dlightjs/reactivity-parser': 1.0.0-alpha.0
@@ -2275,11 +2275,11 @@ packages:
       punycode: 2.3.0
     dev: true
 
-  /vite-plugin-dlight/1.0.0-alpha.6:
-    resolution: {integrity: sha512-ytXxznSJd3/Jhq+b2YsIZzvfLbosM7FMleCOZ89EqqjD39Sz8dGD+a7Q/k50PfZ3GoDknf1w6Mo4pr8p01fhqw==}
+  /vite-plugin-dlight/1.0.0-alpha.7:
+    resolution: {integrity: sha512-HRrIieZOiki5yNTi8HB85s1Pav33B2fxGfrkzfBjRzn78nQK7FP7Yiw9DBjPwMkM7n9ly7gzY16tFgTprLptBw==}
     dependencies:
       '@babel/core': 7.23.0
-      babel-preset-dlight: 1.0.0-alpha.6_@babel+core@7.23.0
+      babel-preset-dlight: 1.0.0-alpha.7_@babel+core@7.23.0
       minimatch: 9.0.3
     transitivePeerDependencies:
       - supports-color
