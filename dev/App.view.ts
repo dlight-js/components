@@ -13,9 +13,7 @@ class App {
           div("hello")
           Routes({
             sub1: () => import("./Sub.view"),
-            sub2: View => {
-              div("sub2")
-            },
+            sub2: () => import("./Sub2.view"),
           })
         },
         world: View => {
