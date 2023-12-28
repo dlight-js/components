@@ -16,6 +16,12 @@ import {
 const rawHistoryPushState = history.pushState
 let historyPushStateFuncs: Array<() => any> = []
 
+export interface RoutesEnv {
+  navigator?: Navigator
+  path?: string
+  _$baseUrl?: string
+}
+
 interface RoutesProps {
   routeMap: ContentProp<
     Record<string, ((View: any) => void) | (<T>() => Promise<T>)>
@@ -97,7 +103,6 @@ class Routes implements RoutesProps {
   }
 
   willMount() {
-    this.updateRoute()
     this.navigator.mode = this.mode!
     this.getNavigator?.(this.navigator)
   }
@@ -148,7 +153,7 @@ class Routes implements RoutesProps {
   }
 
   View() {
-    env()
+    env<RoutesEnv>()
       .navigator(this.navigator)
       .path(this.currUrl)
       ._$baseUrl(`${this._$baseUrl}${this.prevPathCondition}/`)

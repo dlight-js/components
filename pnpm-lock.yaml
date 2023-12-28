@@ -3,11 +3,11 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/cli': ^7.23.4
   '@babel/core': ^7.23.6
-  '@dlightjs/dlight': 1.0.0-alpha.18
+  '@dlightjs/dlight': 1.0.0-alpha.23
   '@dlightjs/types': 1.0.0-alpha.0
   '@typescript-eslint/eslint-plugin': ^6.16.0
   '@typescript-eslint/parser': ^6.16.0
-  babel-preset-dlight: 1.0.0-alpha.12
+  babel-preset-dlight: 1.0.0-alpha.15
   eslint: ^8.56.0
   eslint-config-prettier: ^9.1.0
   eslint-plugin-prettier: ^5.1.2
@@ -15,10 +15,10 @@ specifiers:
   tsup: ^6.7.0
   typescript: ^4.9.5
   vite: ^4.5.1
-  vite-plugin-dlight: 1.0.0-alpha.12
+  vite-plugin-dlight: 1.0.0-alpha.15
 
 dependencies:
-  '@dlightjs/dlight': 1.0.0-alpha.18
+  '@dlightjs/dlight': 1.0.0-alpha.23
 
 devDependencies:
   '@babel/cli': 7.23.4_@babel+core@7.23.6
@@ -26,7 +26,7 @@ devDependencies:
   '@dlightjs/types': 1.0.0-alpha.0
   '@typescript-eslint/eslint-plugin': 6.16.0_g3cvlqlouer5g23hee5mbeghly
   '@typescript-eslint/parser': 6.16.0_7sjm5uif3lrlodkmlzqsvrpzla
-  babel-preset-dlight: 1.0.0-alpha.12_@babel+core@7.23.6
+  babel-preset-dlight: 1.0.0-alpha.15_@babel+core@7.23.6
   eslint: 8.56.0
   eslint-config-prettier: 9.1.0_eslint@8.56.0
   eslint-plugin-prettier: 5.1.2_glhtlnotbb6crparhn2ogh22s4
@@ -34,7 +34,7 @@ devDependencies:
   tsup: 6.7.0_typescript@4.9.5
   typescript: 4.9.5
   vite: 4.5.1
-  vite-plugin-dlight: 1.0.0-alpha.12
+  vite-plugin-dlight: 1.0.0-alpha.15
 
 packages:
 
@@ -277,16 +277,16 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@dlightjs/dlight/1.0.0-alpha.18:
-    resolution: {integrity: sha512-5qEP+X1XLInV7Z7ujogmwDa2Nofu2FTfiCpf877JQQOUEnxDh7DD6TnIEWyL26oQTC4e8faTbygjTw63JGmRJw==}
+  /@dlightjs/dlight/1.0.0-alpha.23:
+    resolution: {integrity: sha512-k5w43NqAI/pJA0m2wu/ZngRYJZFkvG+wimlztc/kIFGeWFfQM8CPAsuX0w3+NHmr4Gz0JEPzFoagSHf7a4u+Dw==}
     dev: false
 
   /@dlightjs/error-handler/1.0.0-alpha.0:
     resolution: {integrity: sha512-+qgMn5XH8aAPhLK4EQMphj1rYK2u9WRuVtvj4pcwuTh1WCA7udixxn2vJP1J37N0GqHRQUlCw8vj6mwVGGUe5w==}
     dev: true
 
-  /@dlightjs/reactivity-parser/1.0.0-alpha.2:
-    resolution: {integrity: sha512-W4wpcf0xtynjDtLbDN5ndLZ6dbO6r2bx2HWSxj/IVZ9aETIWMevVMy8XAauylKIB/q6LzHAFtCRxAE5guZxPSA==}
+  /@dlightjs/reactivity-parser/1.0.0-alpha.3:
+    resolution: {integrity: sha512-JArB0ctLeYhOAoq7WQcpZgtlziXOrPLZr4Sxx2VTCZlYc7zZ3qdEbKnVrRdM8UabHJXqPMkja/MMZT5Djv6p5Q==}
     dependencies:
       '@dlightjs/error-handler': 1.0.0-alpha.0
       '@dlightjs/view-parser': 1.0.0-alpha.1
@@ -296,11 +296,11 @@ packages:
     resolution: {integrity: sha512-N2OAjL3+kuUUvvLKmTqjhMZkJ6twS54ReurlOvqJxe2x+6ISJvVZgzrS+wrlC/QFj2AiNOQmdWawYcbq5WTx4A==}
     dev: true
 
-  /@dlightjs/view-generator/1.0.0-alpha.10:
-    resolution: {integrity: sha512-4kwUmPBRKOI2ODU1q1n+UxW/2C6hg381rKsn8g6g0x/764x4lhMsMzxZ/BDj0ZUhS9jhQi2XKIUozsprZ5auYQ==}
+  /@dlightjs/view-generator/1.0.0-alpha.13:
+    resolution: {integrity: sha512-hibc/YMvlmnRSED7MJvq48HU2QPkbML+J6lu7nU3vgaLckjWj9zBvvovE70Ny+VgoFFdXHvIGF1bx+SxsuA+9w==}
     dependencies:
       '@dlightjs/error-handler': 1.0.0-alpha.0
-      '@dlightjs/reactivity-parser': 1.0.0-alpha.2
+      '@dlightjs/reactivity-parser': 1.0.0-alpha.3
     dev: true
 
   /@dlightjs/view-parser/1.0.0-alpha.1:
@@ -1066,12 +1066,12 @@ packages:
       '@babel/helper-plugin-utils': 7.22.5
     dev: true
 
-  /babel-preset-dlight/1.0.0-alpha.12_@babel+core@7.23.6:
-    resolution: {integrity: sha512-JD8DdWFYCBzlSwxTYGQUqqSmJbDJq4QXtupKicpugirw9AMCnxq+Fos8107gVW+kqP5yJbQlyOAiGNBf1cvLeQ==}
+  /babel-preset-dlight/1.0.0-alpha.15_@babel+core@7.23.6:
+    resolution: {integrity: sha512-G+hEY9thgQ+rPJ0Yp9yoX7qCqJlDLMeeJUm5e4ZBjj4tcMjvWCcLxLKVRa0jAe/9TX9WrjkSeCrPeYS2fBuY3g==}
     dependencies:
       '@babel/plugin-syntax-decorators': 7.23.3_@babel+core@7.23.6
-      '@dlightjs/reactivity-parser': 1.0.0-alpha.2
-      '@dlightjs/view-generator': 1.0.0-alpha.10
+      '@dlightjs/reactivity-parser': 1.0.0-alpha.3
+      '@dlightjs/view-generator': 1.0.0-alpha.13
       '@dlightjs/view-parser': 1.0.0-alpha.1
       babel-plugin-syntax-typescript-new: 1.0.0
       minimatch: 9.0.3
@@ -2387,11 +2387,11 @@ packages:
       punycode: 2.3.1
     dev: true
 
-  /vite-plugin-dlight/1.0.0-alpha.12:
-    resolution: {integrity: sha512-MBDQH5XKLOr+GL327Jm/H6uYuB4FOT6z5nZbJIxTT5xRSPzyYtw2xH6BKkkd0JNulwkS1Imp/ummKG/L4eHbqQ==}
+  /vite-plugin-dlight/1.0.0-alpha.15:
+    resolution: {integrity: sha512-Xc6VvWmAeICd3UJ7TM9AyuvBaP27cIUuYn1KOukuK7/kjnLxs/cn0RvLt58ZLE8R9yaVu+vTVOy9S2pZl2I5OA==}
     dependencies:
       '@babel/core': 7.23.6
-      babel-preset-dlight: 1.0.0-alpha.12_@babel+core@7.23.6
+      babel-preset-dlight: 1.0.0-alpha.15_@babel+core@7.23.6
       minimatch: 9.0.3
     transitivePeerDependencies:
       - supports-color
