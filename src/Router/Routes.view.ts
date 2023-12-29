@@ -27,17 +27,25 @@ interface RoutesProps {
     Record<string, ((View: any) => void) | (<T>() => Promise<T>)>
   >
   mode?: "hash" | "history"
-  getNavigator?: (nav: Navigator) => void
+  onPathUpdate?: (path: string) => void
+  fallback?: (View: any) => void
 }
 
 @View
 class Routes implements RoutesProps {
   @Content routeMap: RoutesProps["routeMap"] = required
   @Prop mode: RoutesProps["mode"] = "history"
-  @Prop getNavigator?: RoutesProps["getNavigator"]
+  @Prop fallback?: RoutesProps["fallback"]
+
   @Env _$baseUrl = ""
 
   currUrl = this.mode === "hash" ? getHashLocation() : getHistoryLocation()
+  @Prop onPathUpdate?: RoutesProps["onPathUpdate"]
+
+  @Watch
+  watchPath() {
+    this.onPathUpdate?.(this.currUrl)
+  }
 
   prevPathCondition?: string
   currentRoute: {
@@ -83,6 +91,12 @@ class Routes implements RoutesProps {
           type: "view",
         }
       } else {
+        if (this.fallback) {
+          this.currentRoute = {
+            view: this.fallback,
+            type: "view",
+          }
+        }
         ;(child as any)().then((module: any) => {
           this.currentRoute = {
             view: module.default,
@@ -104,7 +118,6 @@ class Routes implements RoutesProps {
 
   willMount() {
     this.navigator.mode = this.mode!
-    this.getNavigator?.(this.navigator)
   }
 
   didMount() {

@@ -1,7 +1,11 @@
 import { getPath } from "./utils"
 
 export class Navigator {
-  mode: "history" | "hash" = "hash"
+  mode
+
+  constructor(mode: "hash" | "history" = "history") {
+    this.mode = mode
+  }
 
   hashTo(url: string) {
     window.location.href = "#" + getPath(url, this.mode)

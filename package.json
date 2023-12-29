@@ -1,6 +1,6 @@
 {
   "name": "@dlightjs/components",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.18",
   "description": "DLight components library",
   "author": {
     "name": "IanDx",
@@ -27,7 +27,7 @@
     "@dlightjs/types": "1.0.0-alpha.0",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
-    "babel-preset-dlight": "1.0.0-alpha.15",
+    "babel-preset-dlight": "1.0.0-alpha.19",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
@@ -35,9 +35,9 @@
     "tsup": "^6.7.0",
     "typescript": "^4.9.5",
     "vite": "^4.5.1",
-    "vite-plugin-dlight": "1.0.0-alpha.15"
+    "vite-plugin-dlight": "1.0.0-alpha.19"
   },
   "dependencies": {
-    "@dlightjs/dlight": "1.0.0-alpha.23"
+    "@dlightjs/dlight": "1.0.0-alpha.30"
   }
 }

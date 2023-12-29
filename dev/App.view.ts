@@ -1,12 +1,26 @@
 import { View } from "@dlightjs/dlight"
-import { type Typed, type Pretty, div, button, Content } from "@dlightjs/types"
-import { Routes } from "../src"
+import {
+  type Typed,
+  type Pretty,
+  div,
+  button,
+  Content,
+  Watch,
+} from "@dlightjs/types"
+import { Routes, Navigator } from "../src"
 
 @View
 class App {
-  navigator
+  navigator = new Navigator("history")
+  hh
+
+  @Watch
+  watchPath() {
+    console.log("jjjji", this.hh)
+  }
+
   View() {
-    env().ok("shit")
+    env().ok(this.hh)
     {
       Routes({
         hello: View => {
@@ -14,25 +28,24 @@ class App {
           Routes({
             sub1: () => import("./Sub.view"),
             sub2: () => import("./Sub2.view"),
+          }).fallback(View => {
+            div(".....loading")
           })
         },
         world: View => {
           div("world")
         },
-      }).getNavigator(n => {
-        this.navigator = n
-      })
-
-      button("to hello/sub1").onClick(() => {
-        this.navigator.to("/hello/sub1")
-      })
-      button("to hello/sub2").onClick(() => {
-        this.navigator.to("/hello/sub2")
-      })
-      button("to world").onClick(() => {
-        this.navigator.to("/world")
-      })
+      }).onPathUpdate(a => (this.hh = a))
     }
+    button("to hello/sub1").onClick(() => {
+      this.navigator.to("/hello/sub1")
+    })
+    button("to hello/sub2").onClick(() => {
+      this.navigator.to("/hello/sub2")
+    })
+    button("to world").onClick(() => {
+      this.navigator.to("/world")
+    })
   }
 }
 
