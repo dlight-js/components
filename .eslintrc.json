@@ -5,8 +5,7 @@
         "es2021": true
     },
     "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -23,5 +22,5 @@
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_|View" }]
     },
-    "plugins": ["@typescript-eslint", "prettier"]
+    "plugins": ["@typescript-eslint"]
 }

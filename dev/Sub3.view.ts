@@ -1,4 +1,4 @@
-import { Env, Prop, View, div } from "@dlightjs/dlight"
+import { Env, Prop, View, div, h3 } from "@dlightjs/dlight"
 
 @View
 export default class Sub {
@@ -19,6 +19,6 @@ export default class Sub {
 
   View() {
     div(this.path)
-    div(this.ok ?? "nono")
+    h3(this.ok ?? "212121212" + "shit")
   }
 }
