@@ -11,7 +11,7 @@ export function getPath(url: string, mode: "history" | "hash") {
   if (url[0] === "/") {
     newHref = url
   } else {
-    // ---- 相对位置
+    // ---- Relative path
     if (url[0] !== ".") url = "./" + url
     const baseUrl =
       mode === "history"
@@ -24,7 +24,6 @@ export function getPath(url: string, mode: "history" | "hash") {
       if (![".", ".."].includes(splitUrl)) break
       if (splitUrl === "..") {
         if (currUrls.length === 0) {
-          // TODO 报错 没有前路径给你 ../ 了
           console.warn(`no ../ in ${url}`)
         }
         currUrls.pop()
@@ -34,4 +33,19 @@ export function getPath(url: string, mode: "history" | "hash") {
     newHref = "/" + [...currUrls, ...splitUrls.slice(idx)].join("/")
   }
   return newHref
+}
+
+export function trimPath(path: string) {
+  return path.replace(/(^\/+)|(\/+$)/g, "")
+}
+
+export function paramObjCompare(obj1: any, obj2: any) {
+  if (!obj1 && !obj2) return true
+  if (!obj1 || !obj2) return false
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false
+  return Object.keys(obj1).every(key => obj2[key] === obj1[key])
+}
+
+export function isDLightClass(comp: any) {
+  return !!comp.prototype?.View
 }

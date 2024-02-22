@@ -1,33 +1,35 @@
-import { View } from "@dlightjs/dlight"
-import { type Pretty, ForwardProps } from "@dlightjs/types"
+import { ForwardProps, Pretty, View } from "@dlightjs/dlight"
 
 /**
  * @example
  * ```js
  * import { lazy } from "@dlightjs/components"
  * const MyComp = lazy(() => import("./MyComp.view"))
+ *
+ * import Loading from "./Loading.view"
+ * const MyComp = lazy(() => import("./MyComp.view"), Loading)
  * ```
  */
 export function lazy<T>(
   importFunc: () => Promise<{ default: T }>,
-  fallback?: any
+  FallbackCls?: any
 ) {
   @ForwardProps
   @View
   class LazyComp {
-    v?: any
+    ViewCls?: any
 
     willMount() {
       void importFunc().then((module: any) => {
-        this.v = module.default
+        this.ViewCls = module.default
       })
     }
 
     View() {
-      if (this.v) {
-        this.v().forwardProps()
-      } else if (fallback) {
-        fallback()
+      if (this.ViewCls) {
+        this.ViewCls().forwardProps()
+      } else if (FallbackCls) {
+        FallbackCls()
       }
     }
   }

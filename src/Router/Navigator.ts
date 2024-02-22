@@ -1,7 +1,7 @@
 import { getPath } from "./utils"
 
 export class Navigator {
-  mode
+  mode: "hash" | "history"
 
   constructor(mode: "hash" | "history" = "history") {
     this.mode = mode
