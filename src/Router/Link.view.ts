@@ -16,10 +16,25 @@ import { Navigator } from "./Navigator"
 import { getHashLocation, getHistoryLocation } from "./utils"
 
 interface LinkProps {
+  /**
+   * @brief The content of the link
+   */
   content?: ContentProp<string>
+  /**
+   * @brief The path to navigate to
+   */
   to: string
+  /**
+   * @brief The mode of navigation, will retrieved from the navigator if not provided
+   */
   mode?: "hash" | "history"
+  /**
+   * @brief The style of the a tag
+   */
   style?: Record<string, string>
+  /**
+   * @brief The class of the a tag
+   */
   class?: string
 }
 
