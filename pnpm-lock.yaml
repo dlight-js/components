@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/cli': ^7.23.9
   '@babel/core': ^7.23.9
-  '@dlightjs/dlight': 1.0.0-beta.34
+  '@dlightjs/dlight': 1.0.0-beta.35
   '@typescript-eslint/eslint-plugin': ^6.21.0
   '@typescript-eslint/parser': ^6.21.0
   babel-preset-dlight: 1.0.0-beta.24
@@ -16,7 +16,7 @@ specifiers:
   vite-plugin-dlight: 1.0.0-beta.24
 
 dependencies:
-  '@dlightjs/dlight': 1.0.0-beta.34
+  '@dlightjs/dlight': 1.0.0-beta.35
 
 devDependencies:
   '@babel/cli': 7.23.9_@babel+core@7.23.9
@@ -273,10 +273,11 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@dlightjs/dlight/1.0.0-beta.34:
-    resolution: {integrity: sha512-Ga1qz4Sl8WsfvV2RDMk7utowedr59uQBRUNHVlVGAOKoe3o2M8m9gZ5yN98hl02Sl4vEVe6Y6YUBOhGfyNxk6A==}
+  /@dlightjs/dlight/1.0.0-beta.35:
+    resolution: {integrity: sha512-a7zVZgUuvoRrZzlImNGNzZY4zqsQ6hdy1UyuaBuYGEoLLpr+20KGjF2kOrZNFgY84Sma8qaS/ysSbA7P/eQhqw==}
     dependencies:
       '@dlightjs/store': 0.0.0
+      csstype: 3.1.3
     dev: false
 
   /@dlightjs/error-handler/1.0.0-alpha.0:
@@ -1217,6 +1218,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /csstype/3.1.3:
+    resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
+    dev: false
 
   /debug/4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}

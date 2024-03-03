@@ -37,6 +37,6 @@
     "vite-plugin-dlight": "1.0.0-beta.24"
   },
   "dependencies": {
-    "@dlightjs/dlight": "1.0.0-beta.34"
+    "@dlightjs/dlight": "1.0.0-beta.35"
   }
 }
