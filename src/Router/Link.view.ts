@@ -64,7 +64,7 @@ class Link implements LinkProps {
     this.nav.to(this.to)
   }
 
-  View() {
+  Body() {
     a()
       .onClick(this.handleClick)
       .class(this.class)

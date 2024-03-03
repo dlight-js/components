@@ -243,7 +243,7 @@ class RouteGroup implements RouteGroupProps {
     }
   }
 
-  View() {
+  Body() {
     env<RouteGroupEnv>()
       .navigator(this.navigator)
       .path(this.prevInfo.path)

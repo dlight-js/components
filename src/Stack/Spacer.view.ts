@@ -3,7 +3,7 @@ import {  Pretty, Typed, View, div } from "@dlightjs/dlight"
 @View
 class Spacer {
   isSpacer = true
-  View() {
+  Body() {
     div()
       .style({
         flexGrow: 1,

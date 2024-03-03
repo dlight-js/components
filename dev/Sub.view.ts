@@ -17,7 +17,7 @@ export default class Sub {
     console.log("did unmount")
   }
 
-  View() {
+  Body() {
     div(this.path)
     div(this.ok ?? "nono")
   }

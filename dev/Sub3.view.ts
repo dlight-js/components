@@ -17,7 +17,7 @@ export default class Sub {
     console.log("did unmount")
   }
 
-  View() {
+  Body() {
     div(this.path)
     h3(this.ok ?? "212121212" + "shit")
   }

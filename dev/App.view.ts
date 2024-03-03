@@ -15,7 +15,7 @@ class JJ {
     console.log("jj will mount")
   }
 
-  View() {
+  Body() {
     "ok"
   }
 }
@@ -23,7 +23,7 @@ class JJ {
 class App {
   arr = [1]
 
-  View() {
+  Body() {
       JJ()
   
   }

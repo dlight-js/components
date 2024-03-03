@@ -13,7 +13,7 @@ export default class Sub2 {
   willMount() {
     console.log("path", this.path, this.ok)
   }
-  View() {
+  Body() {
     h1("subaefaefa")
   }
 }

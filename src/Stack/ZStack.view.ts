@@ -46,7 +46,7 @@ class ZStack implements ZStackProps {
     injectFuncToInitNodes(this.nodes, this.setStyles)
   }
 
-  View() {
+  Body() {
     div()
       .style({
         ...this.style,

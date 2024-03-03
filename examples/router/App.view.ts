@@ -14,7 +14,7 @@ import Links from "./Links.view";
 @View
 @Main
 class App {
-  View() {
+  Body() {
     Links([
       "/home", 
       "/about", 

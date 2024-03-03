@@ -11,7 +11,7 @@ class Doc {
     console.log(`Doc willUnmount: ${this.name}`)
   }
   
-  View() {
+  Body() {
     h2(`Doc name: ${this.name}`)
   }
 }

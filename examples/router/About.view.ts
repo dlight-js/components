@@ -2,7 +2,7 @@ import { View, type Pretty, type Typed, h1 } from "@dlightjs/dlight"
 
 @View
 class About {
-  View() {
+  Body() {
     h1("About: component")
   }
 }

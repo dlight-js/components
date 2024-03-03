@@ -16,7 +16,7 @@ class Links implements LinksProps {
     }
   }
 
-  View() {
+  Body() {
     div(); {
       for (const link of this.links) {
         this.Link(link)

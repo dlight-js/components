@@ -40,7 +40,7 @@ class HStack implements HStackProps {
     injectFuncToInitNodes(this.nodes, this.setStyles)
   }
 
-  View() {
+  Body() {
     div()
       .style({
         ...this.style,

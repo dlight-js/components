@@ -25,7 +25,7 @@ export function lazy<T>(
       })
     }
 
-    View() {
+    Body() {
       if (this.ViewCls) {
         this.ViewCls().forwardProps()
       } else if (FallbackCls) {
