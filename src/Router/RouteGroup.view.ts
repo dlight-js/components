@@ -113,7 +113,7 @@ class RouteGroup implements RouteGroupProps {
           this._dl_router_baseUrl
         )
         if (canGo === false) {
-          this.navigator.to(this.prevInfo.path)
+          this.prevInfo.path && this.navigator.to(this.prevInfo.path)
           return
         }
         if (typeof canGo === "string") {
